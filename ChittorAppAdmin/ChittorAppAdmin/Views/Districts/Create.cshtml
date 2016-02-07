@@ -1,8 +1,7 @@
-﻿@model ChittorAPPAdmin.Entities.Area
+﻿@model ChittorAPPAdmin.Entities.Districts
 
 @{
     ViewBag.Title = "Create";
-    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Create</h2>
@@ -13,23 +12,23 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Area</h4>
+        <h4>Districts</h4>
         <hr />
         @Html.ValidationSummary(true)
 
-
         <div class="form-group">
-            @Html.LabelFor(model => model.AreaName,"Area", new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.DistrictName, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.AreaName)
-                @Html.ValidationMessageFor(model => model.AreaName)
+                @Html.EditorFor(model => model.DistrictName)
+                @Html.ValidationMessageFor(model => model.DistrictName)
             </div>
         </div>
+
         <div class="form-group">
-            @Html.LabelFor(model => model.DistrictID, "Select District", new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.StateID, "StateID", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("DistrictID", "Select District")
-                @Html.ValidationMessageFor(model => model.DistrictID)
+                @Html.DropDownList("StateID", String.Empty)
+                @Html.ValidationMessageFor(model => model.StateID)
             </div>
         </div>
 
