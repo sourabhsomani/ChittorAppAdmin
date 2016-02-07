@@ -12,9 +12,10 @@ namespace ChittorAPPAdmin.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection")
+            : base("ApplicationServices", throwIfV1Schema: false)
         {
         }
+
         public virtual DbSet<Categories> Categories { get; set; }
         public virtual DbSet<State> States { get; set; }
         public virtual DbSet<Districts> Districts { get; set; }
