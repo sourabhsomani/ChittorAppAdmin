@@ -10,7 +10,7 @@ namespace ChittorAPPAdmin.Entities
     {
         [Key]
         public string StateID { get; set; }
-        [Required]
+        [Required(ErrorMessage="State Name is Required")]
         public string StateName { get; set; }
 
     }
