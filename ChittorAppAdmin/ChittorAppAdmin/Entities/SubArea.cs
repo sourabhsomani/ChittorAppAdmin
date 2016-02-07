@@ -20,9 +20,9 @@ namespace ChittorAPPAdmin.Entities
         [Required]
         public string ModifiedBy { get; set; }
         [Required]
-        public string AddedDate { get; set; }
+        public DateTime AddedDate { get; set; }
         [Required]
-        public string ModifiedDate { get; set; }
+        public DateTime ModifiedDate { get; set; }
         public virtual Area Areas{ get; set; }
     }
 }
