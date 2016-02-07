@@ -164,6 +164,7 @@
     <Compile Include="Controllers\DistrictsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StateController.cs" />
+    <Compile Include="Controllers\SubAreaController.cs" />
     <Compile Include="Entities\Area.cs" />
     <Compile Include="Entities\Bussiness.cs" />
     <Compile Include="Entities\Categories.cs" />
