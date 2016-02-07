@@ -16,5 +16,10 @@ namespace ChittorAPPAdmin.Models
         {
         }
         public virtual DbSet<Categories> Categories { get; set; }
+        public virtual DbSet<State> States { get; set; }
+        public virtual DbSet<Districts> Districts { get; set; }
+        public virtual DbSet<Area> Areas { get; set; }
+        public virtual DbSet<SubArea> SubAreas { get; set; }
+        
     }
 }
