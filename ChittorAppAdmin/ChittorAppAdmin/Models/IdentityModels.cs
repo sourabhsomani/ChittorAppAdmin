@@ -20,6 +20,7 @@ namespace ChittorAPPAdmin.Models
         public virtual DbSet<Districts> Districts { get; set; }
         public virtual DbSet<Area> Areas { get; set; }
         public virtual DbSet<SubArea> SubAreas { get; set; }
+        public virtual DbSet<Bussiness> Bussiness { get; set; }
         
     }
 }
