@@ -1,0 +1,67 @@
+﻿@model ChittorAPPAdmin.Entities.Area
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Area</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.District.DistrictName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.District.DistrictName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AreaName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AreaName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AreaAddedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AreaAddedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AreaModifiedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AreaModifiedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AreaAddedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AreaAddedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AreaModifiedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AreaModifiedBy)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

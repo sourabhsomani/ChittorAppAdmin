@@ -1,0 +1,64 @@
+﻿@model IEnumerable<ChittorAPPAdmin.Entities.Area>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.District.DistrictName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AreaName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AreaAddedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AreaModifiedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AreaAddedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AreaModifiedBy)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.District.DistrictName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AreaName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AreaAddedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AreaModifiedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AreaAddedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AreaModifiedBy)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
