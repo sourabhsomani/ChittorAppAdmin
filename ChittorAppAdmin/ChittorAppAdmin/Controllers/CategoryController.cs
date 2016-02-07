@@ -8,9 +8,11 @@ using System.Web;
 using System.Web.Mvc;
 using ChittorAPPAdmin.Entities;
 using ChittorAPPAdmin.Models;
+using Microsoft.AspNet.Identity;
 
 namespace ChittorAPPAdmin.Controllers
 {
+    [Authorize]
     public class CategoryController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -47,19 +49,18 @@ namespace ChittorAPPAdmin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="Category")] Categories categories)
+        public ActionResult Create([Bind(Include = "Category")] Categories categories)
         {
             categories.ID = Guid.NewGuid().ToString();
             categories.AddedDate = DateTime.Now;
             categories.ModifiedDate = DateTime.Now;
-            if (ModelState.IsValid)
-            {
-                db.Categories.Add(categories);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+            categories.AddedBy = User.Identity.GetUserId();
+            categories.ModifiedBy = User.Identity.GetUserId();
 
-            return View(categories);
+            db.Categories.Add(categories);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
         }
 
         // GET: /Category/Edit/5
@@ -82,7 +83,7 @@ namespace ChittorAPPAdmin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="ID,Category,AddedDate,ModifiedDate,AddedBy,ModifiedBy")] Categories categories)
+        public ActionResult Edit([Bind(Include = "ID,Category,AddedDate,ModifiedDate,AddedBy,ModifiedBy")] Categories categories)
         {
             if (ModelState.IsValid)
             {
