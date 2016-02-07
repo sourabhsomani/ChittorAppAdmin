@@ -165,6 +165,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StateController.cs" />
     <Compile Include="Entities\Area.cs" />
+    <Compile Include="Entities\Bussiness.cs" />
     <Compile Include="Entities\Categories.cs" />
     <Compile Include="Entities\Districts.cs" />
     <Compile Include="Entities\State.cs" />
@@ -242,6 +243,11 @@
     <Content Include="Views\State\Details.cshtml" />
     <Content Include="Views\State\Edit.cshtml" />
     <Content Include="Views\State\Index.cshtml" />
+    <Content Include="Views\Area\Create.cshtml" />
+    <Content Include="Views\Area\Delete.cshtml" />
+    <Content Include="Views\Area\Details.cshtml" />
+    <Content Include="Views\Area\Edit.cshtml" />
+    <Content Include="Views\Area\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
