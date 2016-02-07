@@ -161,7 +161,11 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Entities\Area.cs" />
     <Compile Include="Entities\Categories.cs" />
+    <Compile Include="Entities\Districts.cs" />
+    <Compile Include="Entities\State.cs" />
+    <Compile Include="Entities\SubArea.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

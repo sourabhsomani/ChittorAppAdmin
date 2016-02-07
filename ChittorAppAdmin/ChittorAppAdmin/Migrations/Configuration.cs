@@ -9,7 +9,7 @@ namespace ChittorAPPAdmin.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(ChittorAPPAdmin.Models.ApplicationDbContext context)
